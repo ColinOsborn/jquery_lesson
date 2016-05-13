@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $('input[type=checkbox]');
+  console.log($('input[type=checkbox]'));
 });
