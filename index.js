@@ -1,11 +1,19 @@
 $(document).ready(function(){
   console.log($('input[type=checkbox]'));
 
-  $('.repbulican').toggleClass('red');
+  $('.republican').toggleClass('red');
   $('.democrat').toggleClass('blue');
   $('.term').toggleClass('yellow');
   $('.whig').css({
     backgroundColor: 'purple',
-    fontColor: 'white'
+    color: 'white'
     });
+
+  $('.died').next().addClass('green');
+  $('.one-term').addClass('red');
+  $('input:checked').parent('td').addClass('blue');
 });
+
+//
+// $('.federalist').parent().parent()
+// $('.federalist').parents()
