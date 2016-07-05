@@ -18,10 +18,35 @@ $(document).ready(function(){
   // $('.died').children('.term').append('<span class="died">(Died)<span>');
   // $('.number').prepend('<input type="radio">');
 
-  $('checkbox').on('click', function(){
-    $(this).parent().addClass("blue");
+  $(':checkbox').on('click', function(){
+    $(this).parent().toggleClass("blue");
   });
-  
+  // this is an inline function
+  // $(':checkbox').on('click', toggleBlue)
+  //
+  // function toggleBlue(){
+  //   $(this).parent().toggleClass('blue');
+  // }
+  //
+  // $(':checkbox').on('click', function(){
+  //   $(this).parent().toggleClass('blue');
+  // });
+
+  // first exercise
+  $(':checkbox').on('click', function(){
+    $(this).parents('tr').addClass('yellow');
+  });
+    // second exercise
+  $('td').on('click', function(){
+    $(this).addClass('red');
+  });
+  // bonus
+  $('body').append('<div id="names"></div>');
+  $(':checkbox').on('click', function(){
+    var name = $(this).parent().siblings('.name').text();
+    $("#names").append(name);
+  });
+
 });
 
 //
