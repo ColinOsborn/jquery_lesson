@@ -40,6 +40,9 @@ $(document).ready(function(){
   $('td').on('click', function(){
     $(this).addClass('red');
   });
+
+    //third exercise
+
   // bonus
   $('body').append('<div id="names"></div>');
   $(':checkbox').on('click', function(){
